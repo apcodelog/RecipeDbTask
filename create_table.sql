@@ -62,4 +62,32 @@ CREATE TABLE contacts(
     lastname VARCHAR(40) NOT NULL,
     email VARCHAR(128) UNIQUE,
     phone VARCHAR(10) NOT NULL
-)
+);
+
+
+CREATE TABLE addresses(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    addressline VARCHAR(60) NOT NULL,
+    postalcode_id INTEGER NOT NULL,
+    CONSTRAINT fk_postalcode FOREIGN KEY(postalcode_id) REFERENCES postalcodes(id)
+);
+
+
+CREATE TABLE postalcodes(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    postalcode VARCHAR(60) UNIQUE,
+    city_id INTEGER NOT NULL,
+    CONSTRAINT fk_city FOREIGN KEY(city_id) REFERENCES cities(id)
+);
+
+CREATE TABLE cities(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(60) UNIQUE,
+    country_id INTEGER NOT NULL,
+    CONSTRAINT fk_country FOREIGN KEY(country_id) REFERENCES countries(id)
+);
+
+CREATE TABLE countries(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(60) UNIQUE
+);

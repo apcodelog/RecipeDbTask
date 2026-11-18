@@ -40,7 +40,7 @@ INSERT INTO ingredients(
     'Socker 5kg',
     29.95,
     1,
-    22,
+    8,
     10,
     3
 ),(
@@ -124,13 +124,17 @@ INSERT INTO suppliers(
     contact_id,
     address_id
 )VALUES(
-    'Lantmännen',
+    'Lantmännen AB',
     1,
     1
 ),(
-    'Norrmejerier',
+    'Norrmejerier AB',
     2,
     2
+),(
+    'Fjell Mat AS',
+    3,
+    3
 );
 
 INSERT INTO contacts(
@@ -142,10 +146,60 @@ INSERT INTO contacts(
     'Erik',
     'Svensson',
     'erik.svensson@lantmannen.test',
-    '070-555 666'
+    '+46 70-555 666'
 ),(
     'Anna',
     'Ek',
     'anna.ek@norrmejerier.test',
-    '070-777 888'
+    '+46 70-777 888'
+),(
+    'Hilde',
+    'Nygaard',
+    'hilde.nygaard@fjellmat.test',
+    '+47 400 35 500'
+);
+
+
+INSERT INTO addresses(
+    addressline,
+    postalcode_id
+)VALUES(
+    'Norrbygatan 15',
+    1
+),(
+    'Norrlandsvägen 4',
+    1
+),(
+    'Fjordveien 70',
+    2
+);
+
+INSERT INTO postalcodes(
+    postalcode,
+    city_id
+)VALUES(
+    '80015',
+    1
+),(
+    '5003',
+    2
+);
+
+INSERT INTO cities(
+    name,
+    country_id
+)VALUES(
+    'Luleå',
+    1
+),(
+    'Bergen',
+    2
+);
+
+INSERT INTO countries(
+    name
+)VALUES(
+    'Sweden'
+),(
+    'Norway'
 );
