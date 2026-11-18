@@ -41,3 +41,25 @@ CREATE TABLE recipequantities(
     CONSTRAINT fk_ingredient FOREIGN KEY(ingredient_id) REFERENCES ingredients(id),
     CONSTRAINT fk_unit FOREIGN KEY(unit_id) REFERENCES units(id)
 );
+
+
+
+
+CREATE TABLE suppliers(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name VARCHAR(60) UNIQUE,
+    contact_id INTEGER NOT NULL,
+    address_id INTEGER NOT NULL,
+    CONSTRAINT fk_address FOREIGN KEY(address_id) REFERENCES addresses(id),
+    CONSTRAINT fk_contact FOREIGN KEY(contact_id) REFERENCES contacts(id)
+);
+
+
+
+CREATE TABLE contacts(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(40) NOT NULL,
+    email VARCHAR(128) UNIQUE,
+    phone VARCHAR(10) NOT NULL
+)

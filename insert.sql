@@ -55,7 +55,7 @@ INSERT INTO ingredients(
     'N020',
     'Mjölk 1,5l',
     16.95,
-    3,
+    2,
     5,
     3,
     3
@@ -63,7 +63,7 @@ INSERT INTO ingredients(
     'N230',
     'Smör 1kg',
     50,
-    3,
+    2,
     8,
     5,
     3
@@ -114,4 +114,38 @@ INSERT INTO recipequantities(
     1,
     1,
     7.8
+);
+
+
+
+
+INSERT INTO suppliers(
+    name,
+    contact_id,
+    address_id
+)VALUES(
+    'Lantmännen',
+    1,
+    1
+),(
+    'Norrmejerier',
+    2,
+    2
+);
+
+INSERT INTO contacts(
+    firstname,
+    lastname,
+    email,
+    phone
+)VALUES(
+    'Erik',
+    'Svensson',
+    'erik.svensson@lantmannen.test',
+    '070-555 666'
+),(
+    'Anna',
+    'Ek',
+    'anna.ek@norrmejerier.test',
+    '070-777 888'
 );
