@@ -1,3 +1,5 @@
+PRAGMA foreign_keys = OFF;
+
 DROP TABLE units;
 DROP TABLE ingredients;
 DROP TABLE recipes;
