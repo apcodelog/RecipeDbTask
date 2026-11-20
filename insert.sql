@@ -67,6 +67,14 @@ INSERT INTO ingredients(
     8,
     5,
     3
+),( 
+    'L040',
+    'Fullkornsmjöl 10kg',
+    39.50,
+    1,
+    15,
+    5,
+    3
 );
 
 INSERT INTO recipes(
@@ -76,9 +84,18 @@ INSERT INTO recipes(
 )VALUES(
     'B001',
     'Ljus morgon',
-    'Släng i ingredienserna och börja knåda och sedan in i ugnen'
+    'Släng i ingredienserna
+Börja knåda
+Sedan in i ugnen'
+),(
+    'B002',
+    'Ljus morgon Fullkorn',
+    'Släng i ingredienserna
+Börja knåda
+Sedan in i ugnen'
 );
 
+-- Recipe Id 1
 INSERT INTO recipequantities(
     recipe_id,
     ingredient_id,
@@ -116,6 +133,44 @@ INSERT INTO recipequantities(
     7.8
 );
 
+
+-- Recipe Id 2
+INSERT INTO recipequantities(
+    recipe_id,
+    ingredient_id,
+    unit_id,
+    quantity
+)VALUES(
+    2,
+    2,
+    1,
+    0.5
+),(
+    2,
+    6,
+    1,
+    0.5
+),(
+    2,
+    5,
+    4,
+    5
+),(
+    2,
+    3,
+    1,
+    0.135
+),(
+    2,
+    4,
+    1,
+    0.09
+),(
+    2,
+    7,
+    1,
+    7.8
+);
 
 
 

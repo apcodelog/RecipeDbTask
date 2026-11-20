@@ -1,6 +1,6 @@
 -- Get a recipe with ingredients and quantites
 SELECT
-    recipes.id
+    recipes.id,
     recipenumber,
     recipes.name,
     instruction,
